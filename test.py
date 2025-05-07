@@ -14,7 +14,7 @@ manchetes = [ ]
 contador = 1
 for elemento in soup.find_all('a' , class_= 'feed-post-link'):
     
-    manchetes.append(f'Manchete {contador}:{(elemento.get_text(strip= False))}')
+    manchetes.append(f'Manchete {contador}: {(elemento.get_text(strip= False))}')
     contador += 1
 df = pd.DataFrame(manchetes , columns=[f'Manchetes do dia '])
 
